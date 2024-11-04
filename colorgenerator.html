@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color</title>
+    <style>
+      .heading{
+        margin-top: 300px;
+        text-align: center;
+      }
+      .btn1{
+        background-color: coral;
+        border-radius: 5px;
+        padding: 10px;
+        color: black;
+        margin-top: -300px;
+        margin-left: 490px;
+      }
+      .btn2{
+        background-color:aqua;
+        border-radius: 5px;
+        padding: 10px;
+        color: black;
+      }
+      .btn3{
+        background-color:palevioletred;
+        border-radius: 5px;
+        padding: 10px;
+        color:black;
+      }
+      
+    </style>
+</head>
+<body>
+  <h2>🤞Color Picker🎨</h2>
+    <button onclick="clr1()">Dark colors</button>
+    <button onclick="clr2()">Light colors</button>
+    <button onclick="clr3()">Random colors</button>
+    <script>
+      var a=document.querySelector("h2");
+      a.setAttribute("class","heading");
+      var b=document.getElementsByTagName("button");
+      b[0].setAttribute("class","btn1");
+      b[1].setAttribute("class","btn2");
+      b[2].setAttribute("class","btn3");
+      console.log(a);
+      var darkcolor=["voilet","yellow","blue","orange","green","red","brown","purple"];
+      count=0;
+      function clr1(){
+        document.body.style.background=darkcolor[count];
+        count++;
+            if (count == darkcolor.length) {
+                count = 0
+            }  
+      }
+      var lightcolor=["bisque","darkgrey","lightgreen","lightskyblue","lightyellow","pink"];
+      count=0;
+      function clr2(){
+        document.body.style.background=lightcolor[count];
+        count++;
+            if (count == lightcolor.length) {
+                count = 0
+            }  
+      }
+      var randomcolor=["lightgreen","red","lightskyblue","yellow","lightyellow","blue"];
+      count=0;
+      function clr3(){
+        document.body.style.background=randomcolor[count];
+        count++;
+            if (count == randomcolor.length) {
+                count = 0
+            }  
+      }
+      
+    </script>
+</body>
+</html>
